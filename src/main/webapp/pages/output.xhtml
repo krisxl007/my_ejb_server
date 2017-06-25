@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" xml:lang="en" lang="en">
+	<head>
+		<title>JSF Output相关输入框</title>
+
+	</head>
+	<body>
+		<p>
+			<ui:insert name="body">
+
+				<h1>JSF Output相关输入框</h1>
+
+				outputLabel: <h:outputLabel value="输出label" /> <br/><br/>
+
+				outputLink: <h:outputLink value="http://www.163.com">
+								<h:outputText value="click to link to 163.com"/>
+								<f:param value="id" name="12345" />
+							</h:outputLink> <br/><br/>
+
+				outputFormat: 	<h:outputFormat value="{0} Love {1}">
+									<f:param value="I" />
+									<f:param value="You" />
+			 					</h:outputFormat> <br/><br/>
+
+				outputText1: <h:outputText value="Output value from html" /> <br/>
+				outputText2: <h:outputText value="#{outputBean.outputValue}" /> <br/><br/>
+
+			</ui:insert>
+		</p>
+	</body>
+</html>

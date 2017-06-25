@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" xml:lang="en" lang="en">
+	<head>
+		<title>JSF Input相关输入框</title>
+
+	</head>
+	<body>
+		<p>
+			<ui:insert name="body">
+
+				<h1>JSF Input相关输入框</h1>
+
+				输入框： <h:inputText value="#{xxx}" /> <br/>
+				文本框:<h:inputTextarea value="#{xxx}" cols="50" rows="10" /> <br/>
+				密码:<h:inputSecret value="#{xxx}" /> <br/>
+				隐藏域:<h:inputHidden value="#{xxx}" /> <br/>
+				<h:form>
+					<h:commandButton value="登陆" action="#{xxx}" /><br/>
+					<h:commandLink value="登陆" action="#{xxx}">
+						<f:param value="爱心" name="love" />
+					</h:commandLink><br/>
+
+					<h:commandLink action="/page/login">
+						<h:outputText value="登陆" />
+					</h:commandLink>
+				</h:form>
+				<br/>
+				<br/>
+			</ui:insert>
+		</p>
+	</body>
+</html>
