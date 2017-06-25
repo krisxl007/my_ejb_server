@@ -1,2 +1,2 @@
 # my_ejb_server
-EJB server, using gradle + jboss
+EJB server, using Gradle + Jboss + EJB + JSF
