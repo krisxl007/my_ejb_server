@@ -12,6 +12,10 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
     compile group: 'org.ow2.spec.ee', name: 'ow2-ejb-3.0-spec', version: '1.0.13'
+
+    // https://mvnrepository.com/artifact/javax.faces/jsf-api
+    compile group: 'javax.faces', name: 'jsf-api', version: '2.1'
+
 }
 
 task "create-dirs" << {
