@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core" xml:lang="en" lang="en">
+	xml:lang="en" lang="en">
 	<head>
 		<title>JSF Input相关输入框</title>
 
@@ -15,22 +15,20 @@
 
 				<h1>JSF Input相关输入框</h1>
 
-				输入框： <h:inputText value="#{xxx}" /> <br/>
-				文本框:<h:inputTextarea value="#{xxx}" cols="50" rows="10" /> <br/>
-				密码:<h:inputSecret value="#{xxx}" /> <br/>
-				隐藏域:<h:inputHidden value="#{xxx}" /> <br/>
 				<h:form>
-					<h:commandButton value="登陆" action="#{xxx}" /><br/>
-					<h:commandLink value="登陆" action="#{xxx}">
-						<f:param value="爱心" name="love" />
-					</h:commandLink><br/>
+					输入框inputText：<h:inputText value="#{inputBean.inputTextValue}" /> <br/><br/>
 
-					<h:commandLink action="/page/login">
-						<h:outputText value="登陆" />
-					</h:commandLink>
+					文本框inputTextarea: <h:inputTextarea value="#{inputBean.inputTextAreaValue}" cols="50" rows="10" style=""/> <br/><br/>
+
+					密码inputSecret: <h:inputSecret value="#{inputBean.inputSecret}" /> <br/><br/>
+
+					隐藏域inputHidden: <h:inputHidden value="#{inputBean.inputHidden}" /> <br/><br/>
+
+					commandButton: <h:commandButton value="Submit Button" action="#{inputBean.submit}" /><br/><br/>
+
+					commandLink: <h:commandLink value="Submit Link" action="#{inputBean.submit}" /><br/><br/>
 				</h:form>
-				<br/>
-				<br/>
+
 			</ui:insert>
 		</p>
 	</body>
