@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xml:lang="en" lang="en">
+
+	<head>
+		<title>JSF dataTable</title>
+	</head>
+
+	<body>
+		<p>
+			<ui:insert name="body">
+
+				<h1>JSF dataTable</h1>
+
+				<h:dataTable value="#{dataTableBean.userList}"
+							 var="user"
+							 border="1"
+							 styleClass="orders"
+							 headerClass="ordersHeader"
+							 rowClasses="evenColumn,oddColumn">
+					<h:column>
+						<f:facet name="header">用户名</f:facet>
+						<h:outputText value="#{user.userName}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">密码</f:facet>
+						<h:outputText value="#{user.password}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">电话</f:facet>
+						<h:outputText value="#{user.tel}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">地址</f:facet>
+						<h:outputText value="#{user.address}" />
+					</h:column>
+				</h:dataTable>
+
+			</ui:insert>
+		</p>
+	</body>
+</html>
