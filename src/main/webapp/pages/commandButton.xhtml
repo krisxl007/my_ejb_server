@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xml:lang="en" lang="en">
+
+	<head>
+		<title>JSF commandButton</title>
+	</head>
+
+	<body>
+		<p>
+			<ui:insert name="body">
+
+				<h1>JSF commandButton</h1>
+
+				<h:form>
+					inputText: <h:inputText id="inputName" value="#{commandButtonBean.name}" /><br/><br/>
+
+					<h:commandButton value="Show Message">
+						<f:ajax execute="inputName" render="outputMessage" />
+					</h:commandButton><br/><br/>
+
+					outputText: <h:outputText id="outputMessage" value="#{commandButtonBean.name}" />
+				</h:form>
+			</ui:insert>
+		</p>
+	</body>
+</html>
+
+
