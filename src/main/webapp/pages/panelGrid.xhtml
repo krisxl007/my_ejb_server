@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xml:lang="en" lang="en">
+
+	<head>
+		<title>JSF panelGrid</title>
+
+        <script type="text/javascript">
+            function panelGridTestOnClick() {
+                alert("test test test...")
+            }
+        </script>
+	</head>
+
+	<body>
+		<p>
+			<ui:insert name="body">
+
+				<h1>JSF panelGrid</h1>
+
+				<h:panelGrid border="2" columns="2" onclick="panelGridTestOnClick()" title="My PanelGrid">
+					<h:outputText value="column 00" />
+					<h:outputText value="column 01" />
+
+					<h:outputText value="column 10" />
+					<h:outputText value="column 11" />
+				</h:panelGrid>
+
+			</ui:insert>
+		</p>
+	</body>
+</html>
+
+
